@@ -1,0 +1,204 @@
+@import url("https://fonts.googleapis.com/css2?family=Red+Hat+Display:wght@500;900&display=swap");
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+  box-sizing: border-box;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after {
+  content: "";
+  content: none;
+}
+
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+body {
+  font-family: "Red Hat Display", sans-serif;
+  overflow-x: hidden;
+}
+body p {
+  color: #87879D;
+  font-size: 1rem;
+}
+
+.m-width {
+  max-width: 700px;
+}
+
+.download-btn {
+  padding: 16px 29px;
+  border-radius: 29px;
+  font-size: 1rem;
+  font-weight: 900;
+  background: #4D96A9;
+  border: none;
+  color: #fff;
+}
+.download-btn span {
+  color: #8FE3F9;
+}
+.download-btn:hover {
+  background: #71C0D4;
+}
+
+.btns {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 16px;
+}
+
+.center {
+  padding: 0px 24px;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  text-align: center;
+}
+header .faces {
+  display: flex;
+  height: 153px;
+  overflow: hidden;
+  margin: 54px 0 48px -20px;
+}
+header .hero-text h1 {
+  font-size: 2.5em;
+  color: #28283D;
+  font-family: Red Hat Display;
+  font-size: 40px;
+  font-weight: 900;
+  line-height: 44px;
+}
+header .hero-text .what-is-it-btn {
+  padding: 16px 29px;
+  border-radius: 29px;
+  font-size: 1rem;
+  font-weight: 900;
+  background: #855FB1;
+  border: none;
+  color: #fff;
+}
+header .hero-text .what-is-it-btn span {
+  color: #8FE3F9;
+}
+header .hero-text .what-is-it-btn:hover {
+  background: #B18BDD;
+}
+header .btns {
+  margin: 32px 0 64px;
+}
+
+section .marker {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+section .marker hr {
+  height: 84px;
+  opacity: 0.25;
+  color: #87879D;
+}
+section .section-marker {
+  width: 56px;
+  padding: 15px;
+  background-color: #FAFAFA;
+  color: #87879D;
+  margin: -9px 0;
+  display: flex;
+  justify-content: center;
+  border: 1px solid rgba(135, 135, 157, 0.25);
+  border-radius: 30px;
+}
+section .images {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  grid-gap: 24px 25px;
+  justify-items: center;
+  margin: 64px 0;
+}
+section .images img {
+  height: 143px;
+  border-radius: 8px;
+}
+section h3 {
+  text-transform: uppercase;
+  color: #4D96A9;
+  font-size: 1rem;
+  font-weight: 900;
+}
+section h2 {
+  font-size: 2rem;
+  line-height: 36px;
+  font-weight: 900;
+  margin: 24px 0 34px 0;
+}
+
+footer {
+  position: absolute;
+  background-image: url(/image-footer.b654a21e.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+  height: 428px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+footerr:before {
+  content: "";
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 255, 255, 0.5);
+  height: 428px;
+  width: 375px;
+  left: 0px;
+  top: 112.00390625px;
+  border-radius: 0px;
+}
+footer .footer-text {
+  text-align: center;
+}
+footer h2 {
+  font-size: 2em;
+}
+footer p {
+  margin: 24px 0 32px 0;
+}
+
+/*# sourceMappingURL=/main.77bb5cfd.css.map */
