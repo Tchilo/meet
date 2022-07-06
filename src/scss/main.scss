@@ -63,10 +63,10 @@ header {
   .faces {
     display: flex;
     overflow: hidden;
-    width: 110%;
+    width: 111%;
     margin: 54px 0 48px -1.35rem;
     & img {
-      width: 100%;
+      width: 105%;
     }
   }
 
@@ -77,6 +77,7 @@ header {
       color: $heading-text;
       font-family: Red Hat Display;
       font-size: 40px;
+      margin-bottom: 20px;
       font-weight: 900;
       line-height: 44px;
 
@@ -105,12 +106,15 @@ section {
 
       color: $marker;
     }
+
+    .footer-marker {
+      z-index: 1;
+      margin-bottom: -10px;
+    }
   }
 
   .section-marker {
-    width: 56px;
-    // border-radius: 50%;
-    padding: 15px;
+    padding: 17px 17.5px;
     background-color: $semi-white;
     color: $paragraph;
     margin: -9px 0;
