@@ -62,10 +62,12 @@ header {
 
   .faces {
     display: flex;
-    height: 153px;
     overflow: hidden;
-    margin: 54px 0 48px -20px;
-
+    width: 110%;
+    margin: 54px 0 48px -1.35rem;
+    & img {
+      width: 100%;
+    }
   }
 
   .hero-text {
@@ -157,20 +159,20 @@ footer {
   &:before {
     content: "";
     display: block;
-    top: 0;
     bottom: 0;
-    left: 0;
+    position: absolute;
+    // z-index:1;
     right: 0;
     background: rgba(0, 255, 255, 0.5);
-    height: 428px;
-    width: 375px;
+    width: 100%;
     left: 0px;
-    top: 112.00390625px;
+    top: 0;
     border-radius: 0px;
 
   }
 
   background-image: url(../assets/mobile/image-footer.jpg);
+
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
