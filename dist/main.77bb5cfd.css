@@ -48,6 +48,8 @@ body {
 body p {
   color: #87879D;
   font-size: 1rem;
+  font-weight: 500;
+  line-height: 26px;
 }
 
 .m-width {
@@ -81,6 +83,7 @@ body p {
 .center {
   padding: 0px 24px;
   display: flex;
+  margin: 0 auto;
   flex-direction: column;
 }
 
@@ -90,7 +93,7 @@ header {
 header .faces {
   display: flex;
   overflow: hidden;
-  width: 111%;
+  width: 105%;
   margin: 54px 0 48px -1.35rem;
 }
 header .faces img {
@@ -104,6 +107,7 @@ header .hero-text h1 {
   margin-bottom: 20px;
   font-weight: 900;
   line-height: 44px;
+  max-width: 600px;
 }
 header .hero-text .what-is-it-btn {
   padding: 16px 29px;
@@ -122,6 +126,15 @@ header .hero-text .what-is-it-btn:hover {
 }
 header .btns {
   margin: 32px 0 64px;
+}
+@media (min-width: 768px) {
+  header .btns {
+    flex-direction: row;
+  }
+  header .container {
+    max-width: 403px;
+    align-self: center;
+  }
 }
 
 section .marker {
@@ -152,29 +165,56 @@ section .images {
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   grid-gap: 24px 25px;
+  width: 100%;
+  max-width: 400px;
   justify-items: center;
-  margin: 64px 0;
+  margin: 64px auto;
 }
 section .images img {
-  height: 143px;
+  width: 100%;
   border-radius: 8px;
+}
+@media (min-width: 768px) {
+  section .images {
+    grid-template-columns: repeat(4, 1fr);
+    max-width: 900px;
+  }
+}
+section.center {
+  align-items: center;
 }
 section h3 {
   text-transform: uppercase;
   color: #4D96A9;
   font-size: 1rem;
   font-weight: 900;
+  letter-spacing: 4px;
 }
 section h2 {
   font-size: 2rem;
   line-height: 36px;
+  width: 104%;
+  text-align: center;
   font-weight: 900;
   margin: 24px 0 34px 0;
 }
+@media (min-width: 768px) {
+  section h2 {
+    font-size: 2.5em;
+    max-width: 482px;
+  }
+  section p {
+    max-width: 548px;
+  }
+  section .md-center {
+    text-align: center;
+    align-items: center;
+  }
+}
 
 footer {
-  position: absolute;
-  background-image: url(/image-footer.b654a21e.jpg);
+  width: 100%;
+  background: linear-gradient(rgba(77, 150, 168, 0.8) 100%, rgba(77, 150, 168, 0.8) 100%), url(/image-footer.b654a21e.jpg);
   background-size: cover;
   background-repeat: no-repeat;
   color: #fff;
@@ -184,26 +224,55 @@ footer {
   flex-direction: column;
   align-items: center;
 }
-footer:before {
-  content: "";
-  display: block;
-  bottom: 0;
-  position: absolute;
-  right: 0;
-  background: rgba(0, 255, 255, 0.5);
-  width: 100%;
-  left: 0px;
-  top: 0;
-  border-radius: 0px;
-}
 footer .footer-text {
   text-align: center;
 }
 footer h2 {
   font-size: 2em;
+  font-weight: 900;
+}
+@media (min-width: 768px) {
+  footer h2 {
+    font-size: 2.5em;
+  }
 }
 footer p {
   margin: 24px 0 32px 0;
+  color: #fff;
+  font-weight: 500;
+  font-size: 18px;
+  line-height: 26px;
+}
+footer .download-btn {
+  padding: 16px 29px;
+  border-radius: 29px;
+  font-size: 1rem;
+  font-weight: 900;
+  background: #855FB1;
+  border: none;
+  color: #fff;
+}
+footer .download-btn span {
+  color: #8FE3F9;
+}
+footer .download-btn:hover {
+  background: #B18BDD;
+}
+footer .download-btn .version {
+  color: #D9B8FF;
+}
+@media (min-width: 768px) {
+  footer .container {
+    max-width: 620px;
+    align-items: center;
+  }
+  footer .container h2 {
+    width: 50%;
+  }
+}
+
+.img-container {
+  height: 143px;
 }
 
 /*# sourceMappingURL=/main.77bb5cfd.css.map */
