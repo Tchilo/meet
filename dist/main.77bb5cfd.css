@@ -55,6 +55,11 @@ body p {
 .m-width {
   max-width: 700px;
 }
+@media (min-width: 1440px) {
+  .m-width {
+    max-width: 70%;
+  }
+}
 
 .download-btn {
   padding: 16px 29px;
@@ -93,21 +98,35 @@ header {
 header .faces {
   display: flex;
   overflow: hidden;
-  width: 105%;
   margin: 54px 0 48px -1.35rem;
+}
+header .faces .d-image-left,
+header .faces .d-image-right {
+  display: none;
 }
 header .faces img {
   width: 105%;
+}
+@media (min-width: 992px) {
+  header .faces {
+    gap: 400px;
+  }
+  header .faces .d-image-left,
+header .faces .d-image-right {
+    display: block;
+  }
+  header .faces .mobile-image {
+    display: none;
+  }
 }
 header .hero-text h1 {
   font-size: 2.5em;
   color: #28283D;
   font-family: Red Hat Display;
-  font-size: 40px;
   margin-bottom: 20px;
   font-weight: 900;
   line-height: 44px;
-  max-width: 600px;
+  max-width: 900px;
 }
 header .hero-text .what-is-it-btn {
   padding: 16px 29px;
@@ -128,12 +147,41 @@ header .btns {
   margin: 32px 0 64px;
 }
 @media (min-width: 768px) {
+  header h1 {
+    font-size: 3em;
+  }
   header .btns {
     flex-direction: row;
   }
   header .container {
     max-width: 403px;
     align-self: center;
+  }
+}
+@media (min-width: 1440px) {
+  header .logo {
+    padding-top: 80px;
+  }
+  header .hero-text {
+    max-width: 800px;
+  }
+  header .hero-text h1 {
+    font-size: 4em;
+    line-height: 64px;
+  }
+  header .faces {
+    gap: 60%;
+  }
+  header .faces .d-image-left {
+    margin-left: -12px;
+  }
+  header .faces .d-image-right {
+    margin-right: -25px;
+  }
+  header .container {
+    position: absolute;
+    top: 23%;
+    max-width: 460px;
   }
 }
 
@@ -149,7 +197,12 @@ section .marker hr {
 }
 section .marker .footer-marker {
   z-index: 1;
-  margin-bottom: -10px;
+  margin-bottom: -29px;
+}
+@media (min-width: 1440px) {
+  section .marker {
+    margin-top: 60px;
+  }
 }
 section .section-marker {
   padding: 17px 17.5px;
@@ -177,7 +230,7 @@ section .images img {
 @media (min-width: 768px) {
   section .images {
     grid-template-columns: repeat(4, 1fr);
-    max-width: 900px;
+    max-width: 1900px;
   }
 }
 section.center {
@@ -209,6 +262,12 @@ section h2 {
   section .md-center {
     text-align: center;
     align-items: center;
+  }
+}
+@media (min-width: 768px) and (min-width: 1440px) {
+  section p {
+    max-width: 463px;
+    text-align: initial;
   }
 }
 
@@ -267,7 +326,33 @@ footer .download-btn .version {
     align-items: center;
   }
   footer .container h2 {
-    width: 50%;
+    width: 73%;
+    margin-left: 70px;
+  }
+}
+@media (min-width: 1440px) {
+  footer {
+    background: linear-gradient(rgba(77, 150, 168, 0.8) 100%, rgba(77, 150, 168, 0.8) 100%), url(/image-footer.7b36653d.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+  footer .container {
+    display: flex;
+    max-width: 1198px;
+    flex-direction: row;
+    gap: 12%;
+    text-align: inherit;
+    /* flex-grow: 1; */
+  }
+  footer .container h2, footer .container p, footer .container button {
+    width: 112%;
+    margin-left: 0;
+  }
+  footer .container p {
+    width: 78%;
+  }
+  footer .container button {
+    width: 140%;
   }
 }
 
