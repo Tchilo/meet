@@ -117,79 +117,48 @@ parcelRequire = (function (modules, cache, entry, globalName) {
   }
 
   return newRequire;
-})({"../node_modules/parcel-bundler/src/builtins/bundle-url.js":[function(require,module,exports) {
-var bundleURL = null;
+})({"assets/logo.svg":[function(require,module,exports) {
+module.exports = "/logo.b37d81ec.svg";
+},{}],"assets/tablet/image-hero.png":[function(require,module,exports) {
+module.exports = "/image-hero.f3fc1724.png";
+},{}],"assets/desktop/image-hero-left.png":[function(require,module,exports) {
+module.exports = "/image-hero-left.84ac6edc.png";
+},{}],"assets/desktop/image-hero-right.png":[function(require,module,exports) {
+module.exports = "/image-hero-right.86e0eda1.png";
+},{}],"assets/desktop/image-woman-in-videocall.jpg":[function(require,module,exports) {
+module.exports = "/image-woman-in-videocall.c4d6a481.jpg";
+},{}],"assets/desktop/image-women-videochatting.jpg":[function(require,module,exports) {
+module.exports = "/image-women-videochatting.53ac3a34.jpg";
+},{}],"assets/desktop/image-men-in-meeting.jpg":[function(require,module,exports) {
+module.exports = "/image-men-in-meeting.9834f219.jpg";
+},{}],"assets/desktop/image-man-texting.jpg":[function(require,module,exports) {
+module.exports = "/image-man-texting.538a6108.jpg";
+},{}],"index.js":[function(require,module,exports) {
+"use strict";
 
-function getBundleURLCached() {
-  if (!bundleURL) {
-    bundleURL = getBundleURL();
-  }
+var _logo = _interopRequireDefault(require("./assets/logo.svg"));
 
-  return bundleURL;
-}
+var _imageHero = _interopRequireDefault(require("./assets/tablet/image-hero.png"));
 
-function getBundleURL() {
-  // Attempt to find the URL of the current script and use that as the base URL
-  try {
-    throw new Error();
-  } catch (err) {
-    var matches = ('' + err.stack).match(/(https?|file|ftp|chrome-extension|moz-extension):\/\/[^)\n]+/g);
+var _imageHeroLeft = _interopRequireDefault(require("./assets/desktop/image-hero-left.png"));
 
-    if (matches) {
-      return getBaseURL(matches[0]);
-    }
-  }
+var _imageHeroRight = _interopRequireDefault(require("./assets/desktop/image-hero-right.png"));
 
-  return '/';
-}
+var _imageWomanInVideocall = _interopRequireDefault(require("./assets/desktop/image-woman-in-videocall.jpg"));
 
-function getBaseURL(url) {
-  return ('' + url).replace(/^((?:https?|file|ftp|chrome-extension|moz-extension):\/\/.+)?\/[^/]+(?:\?.*)?$/, '$1') + '/';
-}
+var _imageWomenVideochatting = _interopRequireDefault(require("./assets//desktop/image-women-videochatting.jpg"));
 
-exports.getBundleURL = getBundleURLCached;
-exports.getBaseURL = getBaseURL;
-},{}],"../node_modules/parcel-bundler/src/builtins/css-loader.js":[function(require,module,exports) {
-var bundle = require('./bundle-url');
+var _imageMenInMeeting = _interopRequireDefault(require("./assets/desktop/image-men-in-meeting.jpg"));
 
-function updateLink(link) {
-  var newLink = link.cloneNode();
+var _imageManTexting = _interopRequireDefault(require("./assets/desktop/image-man-texting.jpg"));
 
-  newLink.onload = function () {
-    link.remove();
-  };
+function _interopRequireDefault(obj) { return obj && obj.__esModule ? obj : { default: obj }; }
 
-  newLink.href = link.href.split('?')[0] + '?' + Date.now();
-  link.parentNode.insertBefore(newLink, link.nextSibling);
-}
-
-var cssTimeout = null;
-
-function reloadCSS() {
-  if (cssTimeout) {
-    return;
-  }
-
-  cssTimeout = setTimeout(function () {
-    var links = document.querySelectorAll('link[rel="stylesheet"]');
-
-    for (var i = 0; i < links.length; i++) {
-      if (bundle.getBaseURL(links[i].href) === bundle.getBundleURL()) {
-        updateLink(links[i]);
-      }
-    }
-
-    cssTimeout = null;
-  }, 50);
-}
-
-module.exports = reloadCSS;
-},{"./bundle-url":"../node_modules/parcel-bundler/src/builtins/bundle-url.js"}],"scss/main.scss":[function(require,module,exports) {
-var reloadCSS = require('_css_loader');
-
-module.hot.dispose(reloadCSS);
-module.hot.accept(reloadCSS);
-},{"./../assets/mobile/image-footer.jpg":[["image-footer.b654a21e.jpg","assets/mobile/image-footer.jpg"],"assets/mobile/image-footer.jpg"],"./../assets/desktop/image-footer.jpg":[["image-footer.7b36653d.jpg","assets/desktop/image-footer.jpg"],"assets/desktop/image-footer.jpg"],"_css_loader":"../node_modules/parcel-bundler/src/builtins/css-loader.js"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
+var data = document.body;
+var temp = document.createElement('template');
+temp.innerHTML = "\n\n\n<header>\n    <nav>\n      <div class=\"logo\"><img src=\"".concat(_logo.default, "\" alt=\"logo\"></div>\n    </nav>\n    <div class=\"faces\">\n      <img class=\"mobile-image\" src=\"").concat(_imageHero.default, "\" alt=\"\">\n      <img class=\"d-image-left\" src=\"").concat(_imageHeroLeft.default, "\" alt=\"many faces \">\n      <img class=\"d-image-right\" src=\"").concat(_imageHeroRight.default, "\" alt=\"\">\n    </div>\n    <div class=\"center hero-text\">\n      <div class=\"container\">\n        <h1>Group Chat\n          for Everyone</h1>\n        <p>\n          Meet makes it easy to connect with others face-to-face virtually and collaborate across any device.\n        </p>\n        <div class=\"btns\">\n          <button class=\"download-btn\">\n            Download <span class=\"version\">\n              v1.3\n            </span>\n          </button>\n\n          <button class=\"what-is-it-btn\">\n            What is it?\n          </button>\n        </div>\n\n      </div>\n\n    </div>\n  </header>\n  <section class=\"center  m-width\">\n    <div class=\"marker\">\n      <hr class=\"line\">\n      <span class=\"section-marker\">\n        01\n      </span>\n    </div>\n\n    <div class=\"images\">\n      <img src=\"").concat(_imageWomanInVideocall.default, "\" alt=\"woman-in-videocall\">\n      <img src=\"").concat(_imageWomenVideochatting.default, "\" alt=\"women-videochatting\">\n      <img src=\"").concat(_imageMenInMeeting.default, "\" alt=\"men-in-a-meeting\">\n      <img src=\"").concat(_imageManTexting.default, "\" alt=\"image-man-texting\">\n    </div>\n    <div class=\"center md-center\">\n      <h3>\n        Built for modern use\n      </h3>\n      <h2>\n        Smarter meetings, all in one place\n      </h2>\n      <p>\n        Send messages, share files, show your screen, and record your meetings \u2014 all in one\n        workspace. Control who can join with invite-only team access, data encryption, and data export.\n      </p>\n\n      <div class=\"marker\">\n        <hr class=\"line\">\n        <span class=\"section-marker footer-marker\">\n          02\n        </span>\n      </div>\n    </div>\n  </section>\n  <footer>\n    <div class=\"center footer-text container\">\n      <div>\n      <h2>\n        Experience more together\n      </h2>\n    </div>\n    <div>\n      <p>\n        Stay connected with reliable HD meetings and unlimited one-on-one and group video sessions.\n      </p>\n    </div>\n      <div>\n        <button class=\"download-btn\">\n          Download <span class=\"version\">\n            v1.3\n          </span>\n        </button>\n      </div>\n    </div>\n  </footer>\n");
+data.append(temp.content);
+},{"./assets/logo.svg":"assets/logo.svg","./assets/tablet/image-hero.png":"assets/tablet/image-hero.png","./assets/desktop/image-hero-left.png":"assets/desktop/image-hero-left.png","./assets/desktop/image-hero-right.png":"assets/desktop/image-hero-right.png","./assets/desktop/image-woman-in-videocall.jpg":"assets/desktop/image-woman-in-videocall.jpg","./assets//desktop/image-women-videochatting.jpg":"assets/desktop/image-women-videochatting.jpg","./assets/desktop/image-men-in-meeting.jpg":"assets/desktop/image-men-in-meeting.jpg","./assets/desktop/image-man-texting.jpg":"assets/desktop/image-man-texting.jpg"}],"../node_modules/parcel-bundler/src/builtins/hmr-runtime.js":[function(require,module,exports) {
 var global = arguments[3];
 var OVERLAY_ID = '__parcel__error__overlay__';
 var OldModule = module.bundle.Module;
@@ -393,5 +362,5 @@ function hmrAcceptRun(bundle, id) {
     return true;
   }
 }
-},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js"], null)
-//# sourceMappingURL=/main.77bb5cfd.js.map
+},{}]},{},["../node_modules/parcel-bundler/src/builtins/hmr-runtime.js","index.js"], null)
+//# sourceMappingURL=/src.e31bb0bc.js.map

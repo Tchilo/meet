@@ -332,6 +332,7 @@ footer .download-btn .version {
 }
 @media (min-width: 1440px) {
   footer {
+    height: 308px;
     background: linear-gradient(rgba(77, 150, 168, 0.8) 100%, rgba(77, 150, 168, 0.8) 100%), url(/image-footer.7b36653d.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -344,7 +345,9 @@ footer .download-btn .version {
     text-align: inherit;
     /* flex-grow: 1; */
   }
-  footer .container h2, footer .container p, footer .container button {
+  footer .container h2,
+footer .container p,
+footer .container button {
     width: 112%;
     margin-left: 0;
   }
