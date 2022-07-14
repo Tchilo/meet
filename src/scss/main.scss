@@ -66,7 +66,7 @@ body {
 
 header {
   text-align: center;
-  
+
   .faces {
 
     .d-image-left,
@@ -136,9 +136,10 @@ header {
 
   @include xl {
     .logo {
-      padding-top:80px;
+      padding-top: 80px;
       // margin-bottom: 500px;
     }
+
     // .container {}
 
     .hero-text {
@@ -338,31 +339,35 @@ footer {
   }
 
   @include xl {
-  background: linear-gradient(rgba(77, 150, 168, 0.8) 100%, rgba(77, 150, 168, 0.8)100%), url(../assets/desktop/image-footer.jpg);
-  background-repeat: no-repeat;
-  background-size: cover;
+    height: 308px;
+    background: linear-gradient(rgba(77, 150, 168, 0.8) 100%, rgba(77, 150, 168, 0.8)100%), url(../assets/desktop/image-footer.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
 
-  .container {
-    display: flex;
-    max-width: 1198px;
-    flex-direction: row;
-    gap: 12%;
-    text-align: inherit;
-    /* flex-grow: 1; */
+    .container {
+      display: flex;
+      max-width: 1198px;
+      flex-direction: row;
+      gap: 12%;
+      text-align: inherit;
+      /* flex-grow: 1; */
 
-    h2,p,button {
-      width: 112%;
-      margin-left: 0;
-    }
-    p {
-      width:78%;
-    }
+      h2,
+      p,
+      button {
+        width: 112%;
+        margin-left: 0;
+      }
 
-    button {
-      width:140%;
+      p {
+        width: 78%;
+      }
+
+      button {
+        width: 140%;
+      }
+
     }
- 
-  }
   }
 }
 
