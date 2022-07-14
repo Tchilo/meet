@@ -7,7 +7,7 @@
 - Parcel
 
 ## See Live 
-[click here!](https://equalizer-delta.vercel.app/
+[click here!](https://meet-app-home-page.netlify.app/)
 
 ## Screenshots
 > | Phone | Tablet |
